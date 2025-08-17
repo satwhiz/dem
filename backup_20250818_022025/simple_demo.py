@@ -1,3 +1,7 @@
+# =============================================================================
+# File: simple_demo.py (Create this as a temporary fix)
+# =============================================================================
+
 import os
 import sys
 import pandas as pd
@@ -22,9 +26,9 @@ def check_prerequisites():
     
     for file_path in required_files:
         if not os.path.exists(file_path):
-            print(f"⚠️  Optional file missing: {file_path}")
-        else:
-            print(f"✅ Found: {file_path}")
+            print(f"❌ Missing required file: {file_path}")
+            return False
+        print(f"✅ Found: {file_path}")
     
     # Check environment
     load_dotenv()
@@ -32,34 +36,19 @@ def check_prerequisites():
     if not os.getenv('OPENAI_API_KEY'):
         print("❌ OpenAI API key not found in environment")
         return False
-    print("✅ DeepSeek API key configured")
+    print("✅ OpenAI API key configured")
     
     return True
 
-def simple_crew_demo_deepseek():
-    """Run a simplified CrewAI demo with DeepSeek API (Fixed)"""
-    print("\n🚀 Starting Simplified CrewAI Demo (DeepSeek - Fixed)")
-    print("=" * 55)
+def simple_crew_demo():
+    """Run a simplified CrewAI demo with basic agents"""
+    print("\n🚀 Starting Simplified CrewAI Demo...")
+    print("=" * 50)
     
     try:
-        # Setup DeepSeek with proper configuration
-        from deepseek_config import DeepSeekConfig
-        config = DeepSeekConfig.setup_environment()
-        print(f"🤖 Using DeepSeek model: {config['model']}")
-        
         from crewai import Agent, Task, Crew, Process
-        from langchain_openai import ChatOpenAI
         
-        # Create LLM instance with proper configuration
-        llm = ChatOpenAI(
-            model=config["model"],
-            openai_api_base=config["base_url"],
-            openai_api_key=config["api_key"],
-            temperature=config["temperature"],
-            max_tokens=config["max_tokens"]
-        )
-        
-        # Create agent with LLM instance
+        # Create a simple agent without custom tools
         data_analyst = Agent(
             role='Senior Financial Data Analyst',
             goal='Analyze trial balance data and provide insights',
@@ -67,8 +56,7 @@ def simple_crew_demo_deepseek():
             in trial balance processing, variance analysis, and tax provision preparation. 
             You have expertise in identifying new accounts, material variances, and ensuring data quality.""",
             verbose=True,
-            allow_delegation=False,
-            llm=llm  # Pass LLM instance directly
+            allow_delegation=False
         )
         
         # Load actual data for context
@@ -137,7 +125,7 @@ def simple_crew_demo_deepseek():
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
         output_data = {
-            "demo_type": "Simplified CrewAI Trial Balance Demo (DeepSeek)",
+            "demo_type": "Simplified CrewAI Trial Balance Demo",
             "timestamp": timestamp,
             "analysis_result": str(result),
             "data_summary": {
@@ -150,7 +138,7 @@ def simple_crew_demo_deepseek():
             }
         }
         
-        output_file = f"data/output/deepseek_demo_results_{timestamp}.json"
+        output_file = f"data/output/simple_demo_results_{timestamp}.json"
         with open(output_file, 'w') as f:
             json.dump(output_data, f, indent=2)
         
@@ -171,8 +159,8 @@ def simple_crew_demo_deepseek():
 
 def main():
     """Main entry point for the simplified demo"""
-    print("🎬 Simplified Trial Balance Automation Demo (DeepSeek)")
-    print("=" * 60)
+    print("🎬 Simplified Trial Balance Automation Demo")
+    print("=" * 50)
     print(f"🕒 Started at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     
     if not check_prerequisites():
@@ -180,7 +168,7 @@ def main():
         return 1
     
     # Run the demo
-    result = simple_crew_demo_deepseek()
+    result = simple_crew_demo()
     
     if result:
         print(f"\n🕒 Finished at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")

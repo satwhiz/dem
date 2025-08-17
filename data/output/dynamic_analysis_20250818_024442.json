@@ -1,0 +1,13 @@
+{
+  "analysis_type": "Dynamic User-Driven Analysis",
+  "timestamp": "20250818_024442",
+  "user_request": "Analyze Q1 2024 for new accounts",
+  "ai_analysis": "Analysis failed: litellm.AuthenticationError: AuthenticationError: OpenAIException - Incorrect API key provided: sk-proj-********************************************************************************************************************************************************UCIA. You can find your API key at https://platform.openai.com/account/api-keys.",
+  "datasets_summary": {
+    "dataset_1": {
+      "record_count": 74,
+      "total_debits": 3562500.0,
+      "total_credits": 3010000.0
+    }
+  }
+}
