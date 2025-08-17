@@ -1,0 +1,18 @@
+{
+  "account_ranges": {
+    "1000-1999": "Asset",
+    "2000-2999": "Liability", 
+    "3000-3999": "Equity",
+    "4000-4999": "Revenue",
+    "5000-5999": "Expense"
+  },
+  "tax_categories": {
+    "Asset": ["CurrentAsset", "NonCurrentAsset"],
+    "Liability": ["CurrentLiability", "NonCurrentLiability"],
+    "Equity": ["ShareCapital", "RetainedEarnings"],
+    "Revenue": ["OperatingRevenue", "NonOperatingRevenue"],
+    "Expense": ["DeductibleExpense", "NonDeductibleExpense"]
+  },
+  "materiality_threshold": 0.15,
+  "confidence_threshold": 0.85
+}

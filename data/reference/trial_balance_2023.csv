@@ -1,0 +1,11 @@
+account_number,account_name,debit,credit,category,entity_id,period
+1000,Cash and Cash Equivalents,125000,0,Asset,ENT001,2023-12-31
+1100,Accounts Receivable,85000,0,Asset,ENT001,2023-12-31
+1500,Inventory,95000,0,Asset,ENT001,2023-12-31
+2000,Accounts Payable,0,45000,Liability,ENT001,2023-12-31
+2100,Accrued Expenses,0,25000,Liability,ENT001,2023-12-31
+3000,Share Capital,0,100000,Equity,ENT001,2023-12-31
+4000,Sales Revenue,0,450000,Revenue,ENT001,2023-12-31
+5000,Cost of Goods Sold,200000,0,Expense,ENT001,2023-12-31
+5100,Operating Expenses,80000,0,Expense,ENT001,2023-12-31
+5200,Administrative Expenses,35000,0,Expense,ENT001,2023-12-31

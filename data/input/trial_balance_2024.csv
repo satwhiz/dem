@@ -1,0 +1,15 @@
+account_number,account_name,debit,credit,entity_id,period,source_system
+1000,Cash and Cash Equivalents,95000,0,ENT001,2024-12-31,SAP
+1100,Accounts Receivable,125000,0,ENT001,2024-12-31,SAP
+1150,Prepaid Expenses,15000,0,ENT001,2024-12-31,SAP
+1500,Inventory,110000,0,ENT001,2024-12-31,SAP
+2000,Accounts Payable,0,65000,ENT001,2024-12-31,SAP
+2100,Accrued Expenses,0,35000,ENT001,2024-12-31,SAP
+2200,Customer Deposits,0,20000,ENT001,2024-12-31,SAP
+3000,Share Capital,0,100000,ENT001,2024-12-31,SAP
+4000,Sales Revenue,0,580000,ENT001,2024-12-31,SAP
+5000,Cost of Goods Sold,275000,0,ENT001,2024-12-31,SAP
+5100,Operating Expenses,120000,0,ENT001,2024-12-31,SAP
+5200,Administrative Expenses,45000,0,ENT001,2024-12-31,SAP
+5300,Marketing Expenses,25000,0,ENT001,2024-12-31,SAP
+5400,Technology Expenses,18000,0,ENT001,2024-12-31,SAP

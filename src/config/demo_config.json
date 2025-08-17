@@ -1,0 +1,16 @@
+{
+  "demo_scenario": {
+    "name": "Q4 2024 Trial Balance Processing",
+    "entity": "ENT001",
+    "current_period": "2024-12-31",
+    "comparison_period": "2023-12-31",
+    "expected_new_accounts": ["1150", "2200", "5300", "5400"],
+    "expected_variances": ["1100", "5100", "5000"]
+  },
+  "agent_config": {
+    "max_iter": 3,
+    "verbose": true,
+    "memory": true,
+    "allow_delegation": true
+  }
+}
