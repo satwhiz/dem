@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-"""
-Working DeepSeek test script with proper LiteLLM integration
-"""
 import os
 from dotenv import load_dotenv
 from deepseek_config import DeepSeekConfig

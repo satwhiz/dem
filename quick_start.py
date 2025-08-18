@@ -1,7 +1,3 @@
-# =============================================================================
-# File: quick_start.py - Fixed Quick Start Script
-# =============================================================================
-
 import os
 import sys
 from dotenv import load_dotenv

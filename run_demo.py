@@ -1,6 +1,3 @@
-"""
-Trial Balance Automation Demo Runner
-"""
 import os
 import sys
 from datetime import datetime

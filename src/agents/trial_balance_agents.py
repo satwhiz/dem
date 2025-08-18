@@ -1,7 +1,3 @@
-# =============================================================================
-# File: src/agents/trial_balance_agents.py (UPDATED VERSION)
-# =============================================================================
-
 from crewai import Agent
 from src.tools.crew_tools import (
     load_trial_balance, 

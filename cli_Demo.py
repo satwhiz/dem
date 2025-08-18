@@ -1,7 +1,3 @@
-# =============================================================================
-# File: cli_demo.py - Command Line Interface for Dynamic System
-# =============================================================================
-
 import os
 import sys
 import argparse
@@ -215,9 +211,6 @@ if __name__ == "__main__":
     exit_code = main()
     sys.exit(exit_code)
 
-# =============================================================================
-# File: example_usage.py - Usage Examples
-# =============================================================================
 
 def example_usage_scenarios():
     """
@@ -264,9 +257,6 @@ def example_usage_scenarios():
     print(f"   2. Run examples: python cli_demo.py --run-examples") 
     print(f"   3. Try interactive mode: python cli_demo.py --interactive")
 
-# =============================================================================
-# File: quick_start.py - Quick Start Script
-# =============================================================================
 
 def quick_start():
     """Quick start script to set up and run a demo"""
@@ -315,5 +305,4 @@ def quick_start():
         print(f"\n❌ Error: {e}")
 
 if __name__ == "__main__":
-    # If run directly, do quick start
     quick_start()
